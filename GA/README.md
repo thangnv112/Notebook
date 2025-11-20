@@ -1,1 +1,5 @@
-Mã hóa nhị phân làm cho thời gian chạy nhanh hơn so với mã hóa số thực là do: 
+Mã hóa nhị phân làm cho thời gian chạy nhanh hơn so với mã hóa số thực là do:
+1. Bản chất bài toán KP là một đồ vật chỉ có 2 trạng thái: được chọn hoặc không được chọn, tương ứng với 1 và 0. Nếu như chỉ sử dụng 2 bit này để mã hóa luôn cho bài toán thì máy tính sẽ không cần tốn tài nguyên để giải mã từ mã hóa (encoding) sang giải pháp (solution)
+2. Trong Real-valued Encoding thì các giá trị như 0.6, 0.7 hay 0.999 đều có nghĩa là 1 cũng như 0.1, 0.2,... đều có nghĩa là 0. Hệ quả là bị lãng phí tài nguyên để tối ưu các con số vô nghĩa (đều là 1), hay là cố gắng tối ưu 1 gene từ 0.7 lên 0.8 mà bản chất sau cùng là không thay đổi gì cả
+3. Thời gian chạy cho các phép toán lai ghép và đột biến của real-valued cũng lâu hơn do phải dùng các phép toán mô phỏng nhị phân với phép toán lũy thừa số thực và chia số thực
+4. Mã hóa bit nhị phân sẽ thường hội tụ nhanh hơn do chỉ có sự thay đổi giữa 0 và 1. Còn số thực có thể từ 0.55 lên 0.6, sau khi decode bản chất vẫn là bit 1 khiến cho fitness không đổi
